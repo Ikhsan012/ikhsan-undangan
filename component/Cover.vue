@@ -6,26 +6,23 @@ const props = defineProps({
   namaTamu: String
 });
 
-const mempelaiPria = "Pria"
-const mempelaiWanita = "Wanita"
+const mempelaiPria = "Sigma"
+const mempelaiWanita = "Skibidi"
 
 const emit = defineEmits(['open']);
 
 const displayedName = ref('');
 let index = 0;
 
-// 2. onMounted akan berjalan saat komponen pertama kali ditampilkan
 onMounted(() => {
   const typingInterval = setInterval(() => {
-    // Tambahkan satu huruf dari namaTamu ke displayedName
     if (index < props.namaTamu.length) {
       displayedName.value += props.namaTamu[index];
       index++;
     } else {
-      // Hentikan interval jika semua huruf sudah ditampilkan
       clearInterval(typingInterval);
     }
-  }, 150); // Kecepatan mengetik (dalam milidetik)
+  }, 150);
 });
 </script>
 
@@ -34,7 +31,6 @@ onMounted(() => {
     <div class="content">
       <h4>The Wedding Of</h4>
       <h1>{{ mempelaiPria }} & {{ mempelaiWanita }}</h1>
-      <br>
       <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
       <h2 class="guest-name">
         {{ displayedName }}<span class="cursor"></span>

@@ -10,6 +10,7 @@ import Navbar from '../component/Navbar.vue';
 import AyatSuci from '../component/AyatSuci.vue';
 import ProfilMempelai from '../component/ProfilMempelai.vue';
 import MiniMap from '../component/MiniMap.vue';
+import ScrollButton from '../component/ScrollButton.vue';
 const isInvitationOpen = ref(false);
 
 const guestName = ref('Tamu Undangan');
@@ -36,18 +37,21 @@ function openInvitation() {
   <Cover v-if="!isInvitationOpen" :nama-tamu="guestName" @open="openInvitation" />
 
   <div v-if="isInvitationOpen">
-    <Navbar /><main class="container">
-      <HeroSection id="hero" /> <ProfilMempelai id="mempelai" />
+    <Navbar />
+    <ScrollButton />
+    <main class="container">
+      <HeroSection id="hero" /> 
+      <HitungMundur />
+      <ProfilMempelai id="mempelai" />
       <AyatSuci id="ayat" />
       <DetailAcara id="acara" />
-      <HitungMundur />
       <GaleriPoto id="galeri" />
       <MiniMap id="lokasi" />
       <Pesan id="rsvp" />
     </main>
   </div>
 
-  <audio ref="audioPlayer" src="/audio/musik.mp3" loop></audio>
+  <audio ref="audioPlayer" src="/src/audio1.mp3" loop></audio>
 </template>
 
 <style scoped>

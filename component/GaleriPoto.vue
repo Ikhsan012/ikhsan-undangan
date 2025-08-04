@@ -1,12 +1,12 @@
 <script setup>
 
 const daftarFoto = [
-  '/images/foto1.jpg',
-  '/images/foto2.jpg',
-  '/images/foto3.jpg',
-  '/images/foto4.jpg',
-  '/images/foto5.jpg',
-  '/images/foto6.jpg',
+  '/src/image/bg.jpeg',
+  '/src/image/bg.jpeg',
+  '/src/image/bg.jpeg',
+  '/src/image/bg.jpeg',
+  '/src/image/bg.jpeg',
+  '/src/image/bg.jpeg',
 ];
 </script>
 

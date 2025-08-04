@@ -1,17 +1,17 @@
 <script setup>
 const mempelaiPria = {
-  namaPanggilan: "Budi",
-  namaLengkap: "Budi Hartono",
-  namaAyah: "Bpk. H. Abdullah",
-  namaIbu: "Ibu Hj. Fatimah",
+  namaPanggilan: "Sigma",
+  namaLengkap: "Sigma Mewing",
+  namaAyah: "Bpk Mewing",
+  namaIbu: "Ibu Gyaat",
   fotoUrl: "/src/image/bg.jpeg"
 };
 
 const mempelaiWanita = {
-  namaPanggilan: "Siti",
-  namaLengkap: "Siti Rahmawati",
-  namaAyah: "Bpk. H. Ahmad",
-  namaIbu: "Ibu Hj. Khadijah",
+  namaPanggilan: "Skibidi",
+  namaLengkap: "Skibidi Gyatt",
+  namaAyah: "Bpk. Rusdi",
+  namaIbu: "Ibu Terkadang",
   fotoUrl: "/src/image/bg.jpeg"
 };
 </script>
