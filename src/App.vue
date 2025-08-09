@@ -10,7 +10,8 @@ import Navbar from '../component/Navbar.vue';
 import AyatSuci from '../component/AyatSuci.vue';
 import ProfilMempelai from '../component/ProfilMempelai.vue';
 import MiniMap from '../component/MiniMap.vue';
-import ScrollButton from '../component/ScrollButton.vue';
+import Hadiah from '../component/Hadiah.vue';
+// import ScrollButton from '../component/ScrollButton.vue';
 const isInvitationOpen = ref(false);
 
 const guestName = ref('Tamu Undangan');
@@ -38,7 +39,6 @@ function openInvitation() {
 
   <div v-if="isInvitationOpen">
     <Navbar />
-    <ScrollButton />
     <main class="container">
       <HeroSection id="hero" /> 
       <HitungMundur />
@@ -47,6 +47,7 @@ function openInvitation() {
       <DetailAcara id="acara" />
       <GaleriPoto id="galeri" />
       <MiniMap id="lokasi" />
+      <Hadiah />
       <Pesan id="rsvp" />
     </main>
   </div>

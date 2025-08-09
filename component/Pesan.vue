@@ -1,23 +1,23 @@
-<script>
-import { ref } from 'vue'
+<script setup>
+import { ref } from 'vue';
 
-const namaTamu = ref('')
-const kehadiran = ref('')
-const jumlahTamu = ref(1)
-const pesam = ref('')
+const namaTamu = ref('');
+const kehadiran = ref('');
+const jumlahTamu = ref(1);
+const pesan = ref('');
 
 const formSubmitted = ref(false);
 
-const DataTamu = () => {
-    console.log({
-        nama: namaTamu.value,
-        kehadiran: kehadiran.value,
-        jumlah: jumlahTamu.value,
-        pesan: pesam.value
-    })
-
-    formSubmitted.value = true
-}
+const handleSubmit = () => {
+  console.log({
+    nama: namaTamu.value,
+    kehadiran: kehadiran.value,
+    jumlah: jumlahTamu.value,
+    pesan: pesan.value 
+  });
+  
+  formSubmitted.value = true;
+};
 </script>
 
 <template>
@@ -33,21 +33,23 @@ const DataTamu = () => {
       <div class="form-group">
         <label>Apakah Anda akan hadir?</label>
         <div class="radio-group">
-        <label>
+          <label>
             <input 
-            type="radio" 
-            value="Hadir" 
-            v-model="kehadiran" 
-            name="status-kehadiran" required> 
+              type="radio" 
+              value="Hadir" 
+              v-model="kehadiran" 
+              name="status-kehadiran" 
+              required> 
             Ya, saya akan hadir
-        </label>
-        <label>
+          </label>
+          <label>
             <input 
-            type="radio" 
-            value="Tidak Hadir" 
-            v-model="kehadiran" 
-            name="status-kehadiran"> Maaf, tidak bisa hadir
-        </label>
+              type="radio" 
+              value="Tidak Hadir" 
+              v-model="kehadiran" 
+              name="status-kehadiran"> 
+            Maaf, tidak bisa hadir
+          </label>
         </div>
       </div>
       
@@ -58,7 +60,7 @@ const DataTamu = () => {
 
       <div class="form-group">
         <label for="pesan">Pesan & Doa</label>
-        <textarea id="pesan" v-model="pesam" rows="4"></textarea>
+        <textarea id="pesan" v-model="pesan" rows="4"></textarea>
       </div>
       
       <button type="submit">Kirim Konfirmasi</button>
@@ -72,6 +74,7 @@ const DataTamu = () => {
 </template>
 
 <style scoped>
+/* Style Anda sudah bagus, tidak perlu diubah */
 .rsvp-container {
   padding: 40px 20px;
   background-color: #ffffff;
@@ -99,7 +102,7 @@ input[type="text"], input[type="number"], textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 100%;
-  box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+  box-sizing: border-box;
 }
 
 .radio-group label {

@@ -47,7 +47,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fdfaf6 url('/src/image/bg.jpeg') no-repeat center center; 
+  background: #fdfaf6 url('/src/image/bg.png') no-repeat center center; 
   background-size: cover;
   display: flex;
   justify-content: center;
